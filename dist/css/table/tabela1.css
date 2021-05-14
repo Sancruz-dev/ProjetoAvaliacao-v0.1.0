@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@import './btnCadastro';
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Quicksand';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#03a9f4, #ff1245);
+    overflow-y: hidden;
+}
+
+.table-box{
+    width: 800px;
+    height: 400px;
+    overflow-y: scroll;  
+    border-bottom: 0.5px solid #ccc;
+    z-index: 10000;
+    border-left: 0.5px solid #ccc;
+    border-top-left-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4),
+                0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border-top: none;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-collapse: collapse;
+    text-align: center; 
+    height: 37px;
+    color: #fff;
+}
+
+th{
+    position: sticky;
+    background: #e93873;
+}
+
+
+tr th:nth-child(1)
+{
+    width: 60px;
+    text-align: center;
+    background: #fff;
+    color: #ff0d5d;
+}
+tr td:nth-child(1){
+    text-align: center;
+    color: #fff;
+    background: #e93873;
+}
+
+tr td:nth-child(5){
+    border-top: 1px solid #fff;
+    background: rgba(0,0,0,0.1);
+}
+tr td:nth-child(6){
+    border-top: 1px solid #fff;
+    background: rgba(0,0,0,0.1);
+    
+}
+td a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    text-decoration: none;
+}
+
+
+.edit img
+{
+    filter: invert(1);
+    width: 35px;
+    height: 35px;
+}
+
+.del img
+{
+    width: 31px;
+    height: 31px; 
+}
+
+
+.custom-shape-divider-bottom-1612906325 {
+    /* @include PositionSizePlace(absolute,100%,'','',0,0); */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1612906325 svg {
+    /* @include PositionSizePlace(relative,calc(100% + 1.3px),150px); */
+    position: relative;
+    width: calc(100%-1.3px);
+    height: 150px;
+    display: block;
+    transform: rotateY(180deg);
+}
+ 
+.custom-shape-divider-bottom-1612906325 .shape-fill 
+{ fill: #fff; }

@@ -1,0 +1,18 @@
+@mixin PositionSizePlace($position:absolute, $wd:initial, $ht:initial, 
+$t:initial, $l:initial, $b:initial, $r:initial) 
+{
+    position: $position;
+    width: $wd;
+    height: $ht;
+    top: $t;
+    left: $l;
+    bottom: $b;
+    right: $r;
+}
+
+@mixin display-just-align($d:flex, $just:center, $align: center)
+{
+    display: $d;
+    justify-content: $just;
+    align-items: $align;
+}

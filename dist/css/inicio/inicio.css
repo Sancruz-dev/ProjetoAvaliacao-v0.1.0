@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@import 'helpers';
+@import 'botao';
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+ 
+.sec
+{
+    /* @include PositionSizePlace(relative, 100%); */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#03a9f4, #e91e63);
+    padding: 100px;
+}
+
+.custom-shape-divider-bottom-1612906325 {
+    /* @include PositionSizePlace(absolute,100%,'','',0,0); */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1612906325 svg {
+    /* @include PositionSizePlace(relative,calc(100% + 1.3px),150px); */
+    position: relative;
+    width: calc(100% - 1.3px);
+    height: 150px;
+    display: block;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1612906325 .shape-fill 
+{ fill: #FFFFFF; }
+
+header
+{
+    /* @include PositionSizePlace(absolute,100%,'',0,0); */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+header .navigation
+{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li
+{
+    list-style: none;
+    
+}
+
+header .navigation li a
+{
+    color: #fff;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.content
+{
+    position: relative;
+    max-width: 600px;
+}
+
+.content h2
+{
+    color: #fff;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.content h2 span
+{
+    color: #fff;
+    font-size: 0.5em;
+}
+
+.content p
+{
+    color: #fff;
+    margin: 10px 0 20px;
+}
+
+.girl
+{
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    right: 100px;
+}
+
+@media (max-width: 991px)
+{
+  
+  
+
+    header {
+        padding: 20px 40px;
+    }
+
+    header ul.navigation {
+        /* @include PositionSizePlace(fixed,100%,100%,0,0); */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#03a9f4, #e91e63);
+        z-index: 100;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+
+    header ul.navigation.active
+    {
+        display: flex; 
+    }
+
+    header ul.navigation li a {
+        color: #fff;
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 30px;
+        transition: 0.5s
+    }
+
+    header .toggleMenu
+    {
+        /* @include PositionSizePlace(fixed); */
+        position: fixed;
+        transform: translate(-50%,-50%);
+
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    div.toggle.active 
+    {
+        cursor: pointer;
+    }
+
+    .toggle span
+    {
+        /* @include PositionSizePlace(relative, 36px, 4px); */
+        position: relative;
+        width: 36px;
+        height: 4px;
+        background:#fff ;
+        display: flex;
+        margin: 0 0 8px 0;
+        transition: .5s;
+        z-index: 1000;
+        cursor: pointer;
+
+    }
+    .toggle span:nth-child(1) {
+        transform-origin: left;
+    }
+
+    .toggle span:nth-child(2) {
+        transform-origin: center;
+    }
+
+    .toggle span:nth-child(3) {
+        transform-origin: left;
+    }
+
+    header .toggle.active
+    {
+        /* @include PositionSizePlace(absolute,'','','','','',0); */
+        position: absolute;
+        right: 0;
+        margin-right: 8%;
+    }
+
+    header .toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+        left: 2px;
+    }
+    
+    header .toggle.active span:nth-child(2) {
+        transform: rotate(315deg);
+        right: 3px;
+    }
+    
+    header .toggle.active span:nth-child(3) {
+        transform: scaleX(0);
+    }
+    
+
+    .sec
+    {
+        justify-content: center;
+        padding: 40px 40px 0;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .content
+    {
+        max-width: 100%;
+        margin-top: 120px;
+    }
+
+    .content h2
+    {
+        font-size: 3em;
+    }
+
+    .girl
+    {
+        /* @include PositionSizePlace(relative, 80%, initial,'','',0,initial); */
+        position: relative;
+        width: 80%;
+        height: initial;
+        bottom: 0;
+        right: initial;
+        position: relative;
+        width: 80%;
+        height: initial;
+        right: initial;
+        bottom: 0;
+        margin-top: 20px;
+    }
+
+}
